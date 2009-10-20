@@ -4,5 +4,29 @@ require 'haml'
 require 'datamapper'
 
 get '/' do
-  "hello world"
+  redirect '/index'
+end
+
+get '/index' do
+  haml :index
+end
+
+get '/about' do
+  haml :about
+end
+
+get '/explanation' do
+  haml :explanation
+end
+
+get '/login' do
+  
+end
+
+get '/logout' do
+  
+end
+
+get '/account' do
+  
 end
