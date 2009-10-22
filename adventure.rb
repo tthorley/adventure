@@ -19,6 +19,10 @@ get '/explanation' do
   haml :explanation
 end
 
+get '/page/:page_number' do
+  
+end
+
 get '/login' do
   
 end
