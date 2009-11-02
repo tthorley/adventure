@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
-require 'datamapper'
+require 'setup'
 
 get '/' do
   redirect '/index'
@@ -20,17 +20,5 @@ get '/explanation' do
 end
 
 get '/page/:page_number' do
-  
-end
-
-get '/login' do
-  
-end
-
-get '/logout' do
-  
-end
-
-get '/account' do
   
 end

@@ -24,6 +24,6 @@ class User
   end
   
   def self.hashify(string)
-    Digest::SHA256.hexdigest(string + SALT)
+    Digest::SHA256.hexdigest(SALT + string)
   end
 end
