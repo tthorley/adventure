@@ -5,4 +5,15 @@
     %li
       %a{:href => '/about', :class => 'about'} About
     %li
-      %a{:href => '/explanation', :class => 'explanation'} How It Works
+      %a{:href => '/explanation', :class => 'explanation'} Explanation
+    - if session[:user]
+      %li
+        %a{:href => '/profile', :class => 'profile'} Profile
+      %li
+        %a{:href => '/logout', :class => 'logout'} Log Out
+    - else
+      %li
+        %a{:href => '/signup', :class => 'signup'} Sign Up      
+      %li
+        %a{:href => '/login', :class => 'login'} Log In
+  

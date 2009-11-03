@@ -8,7 +8,7 @@ CREATE TABLE choices(
 CREATE TABLE pages(
   id          INTEGER PRIMARY KEY AUTOINCREMENT,
   content     TEXT,
-  published   BOOLEAN,
+  published   BOOLEAN default false,
   choice_id   INTEGER,
   user_id     INTEGER,
   created_at  TIMESTAMP,
