@@ -1,44 +1,16 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
-require 'setup'
+require 'dm-core'
+
+ROOT_PATH     = Dir.pwd
+database_file = "/data/data.db"
+DataMapper.setup(:default, "sqlite3://" + ROOT_PATH + database_file)
 
 enable :sessions
 
-get '/' do
-  redirect '/index'
-end
+route_files = Dir.entries("./routes/").find_all{|m| m =~ /\.rb/}
+model_files = Dir.entries("./models/").find_all{|m| m =~ /\.rb/}
 
-get '/index' do
-  haml :index
-end
-
-get '/about' do
-  session[:user] = 1
-  haml :about
-end
-
-get '/explanation' do
-  haml :explanation
-end
-
-get '/page/:page_number' do
-  
-end
-
-get '/signup' do
-  
-end
-
-get '/login' do
-  
-end
-
-get '/profile' do
-  
-end
-
-get '/logout' do
-  session[:user] = nil
-  redirect '/index'  
-end
+route_files.each{|file| load "./routes/" + file}
+model_files.each{|file| load "./models/" + file}
