@@ -15,7 +15,10 @@ You'll need the following gems: sinatra, haml, dm-core, do_sqlite3
 h3. Setup
 
 Initially, you'll need to create the database file in the "data" directory:
-@sqlite3 data.db < schema.sql@
+@sqlite3 production.db < schema.sql@
+
+If you want to run tests:
+@sqlite3 test.db < schema.sql@
 
 h3. Execution
 
