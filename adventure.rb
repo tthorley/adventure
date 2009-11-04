@@ -4,8 +4,10 @@ require 'haml'
 require 'dm-core'
 
 CURRENT = File.dirname(__FILE__)
-database_file = "/data/production.db"
-DataMapper.setup(:default, "sqlite3://" + CURRENT + database_file)
+
+configure(:development) { DataMapper.setup(:default, "sqlite3://#{CURRENT}/data/development.db") }
+configure(:test) { DataMapper.setup(:default, "sqlite3://#{CURRENT}/data/test.db") }
+configure(:production) { DataMapper.setup(:default, "sqlite3://#{CURRENT}/data/production.db") }
 
 enable :sessions
 
