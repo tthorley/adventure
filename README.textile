@@ -1,0 +1,24 @@
+h2. Adventure
+
+I wanted to make a site that allowed a select group of authors
+write something like the choose-your-own-adventure books I enjoyed
+as a kid.
+
+h3. Requirements
+
+* Framework: sinatra
+* Interface: haml
+* ORM: datamapper
+* Database: sqlite3
+
+You'll need the following gems: sinatra, haml, dm-core, do_sqlite3
+
+h3. Setup
+
+For the initial setup, you'll need to create the database file in the "data" directory:
+@sqlite3 data.db < schema.sql@
+
+h3. Execution
+
+1. @ruby adventure.rb@
+2. open a browser to @localhost:4567@
