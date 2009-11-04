@@ -3,6 +3,7 @@ require 'sinatra'
 require 'haml'
 require 'dm-core'
 
+ENV['RACK_ENV'] ||= "development"
 CURRENT = File.dirname(__FILE__)
 
 configure(:development) { DataMapper.setup(:default, "sqlite3://#{CURRENT}/data/development.db") }
