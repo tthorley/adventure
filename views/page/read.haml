@@ -1,7 +1,11 @@
 %pre#display= @page.content
-#choices Do you:
+#choices 
+  Do you:
   %ul
   - @page.choices.each do |choice|
-    %li 
-      %a{:href => "/pages/read/#{choice.page.id}"}= choice.option
+    %li
+      - if choice.page
+        %a{:href => "/read/page/#{choice.page.id}"}= choice.option
+      - else
+        %a{:href => "/missing/page"}= choice.option
   
