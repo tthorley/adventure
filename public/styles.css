@@ -9,10 +9,6 @@ pre {
   text-align: left;
   width: 800px;
   margin: 40px auto;
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 16px;
-	line-height: 24px;
-	color: #333;
 }
 
 /***** navigation *****/
@@ -20,7 +16,7 @@ pre {
 #navigation {
   font-family: Georgia, Times, serif;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 #navigation ul {
@@ -59,6 +55,13 @@ pre {
   border-bottom: 4px solid #333;
 }
 
+#content {
+	font-family: Verdana, Arial, sans-serif;
+  font-size: 16px;
+	line-height: 24px;
+	color: #333;
+	font-weight: 500;
+}
 #footer {
 	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
