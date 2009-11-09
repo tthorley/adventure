@@ -13,3 +13,7 @@ end
 get '/explanation' do
   haml :'main/explanation'
 end
+
+get '/missing/:thing' do
+  haml :'main/missing'
+end

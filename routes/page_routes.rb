@@ -12,7 +12,3 @@ end
 get '/edit/page/:page_number' do
   haml :'page/edit'
 end
-
-get '/missing/page' do
-  haml :'page/missing'
-end
