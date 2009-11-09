@@ -1,5 +1,12 @@
 get '/read/page/:page_number' do
-  haml :'page/read'
+  @page = Page.get(params[:page_number])
+  if @page
+    @footer_left = @page.user.username
+    @footer_right = @page.id
+    haml :'page/read'
+  else
+    haml :'page/missing'
+  end
 end
 
 get '/edit/page/:page_number' do

@@ -1,4 +1,6 @@
 - current_page = request.path_info.split("/")[1]
+- @footer_left ||= "foo"
+- @footer_right ||= "bar"
 !!!
 %html{:xmlns => "http://www.w3.org/1999/xhtml", :lang => "en"}
   %head
@@ -11,4 +13,6 @@
       #content
         = yield
       #footer
-        = haml(:footer, :layout => false)
+        .left= @footer_left 
+        .right= @footer_right
+        .clear

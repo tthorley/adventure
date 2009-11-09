@@ -67,3 +67,12 @@ pre {
 	border-bottom: 2px solid #333;
 	padding: 4px 1px;
 }
+#footer .left {
+	float: left;
+}
+#footer .right {
+	float: right;
+}
+#footer .clear {
+	clear: both;
+}
