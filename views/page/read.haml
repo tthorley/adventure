@@ -1,1 +1,7 @@
-%p read
+%pre#display= @page.content
+#choices Do you:
+  %ul
+  - @page.choices.each do |choice|
+    %li 
+      %a{:href => "/pages/read/#{choice.page.id}"}= choice.option
+  

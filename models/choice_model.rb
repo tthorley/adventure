@@ -5,5 +5,6 @@ class Choice
   property :option,  String
   property :page_id, Integer
   
-  belongs_to :page
+  belongs_to :parent_page, :model => 'Page', :child_key => [:page_id]
+  has 1, :page
 end
