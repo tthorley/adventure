@@ -19,7 +19,7 @@ CREATE TABLE pages(
 
 CREATE TABLE users(
   id            INTEGER PRIMARY KEY AUTOINCREMENT,
-  username      VARCHAR(32),
+  name          VARCHAR(32),
   password_hash CHAR(64),
   created_at    TIMESTAMP
 );

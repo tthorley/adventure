@@ -5,7 +5,7 @@ class User
   SALT = "foo"
   
   property :id,            Serial
-  property :username,      String
+  property :name,          String
   property :password_hash, String, :length => 64
   property :created_at,    DateTime
   
