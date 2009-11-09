@@ -4,13 +4,13 @@ require 'haml'
 require 'dm-core'
 
 ENV['RACK_ENV'] ||= "development"
-CURRENT = File.dirname(__FILE__)
+ROOT_DIR = Dir.pwd
 
-configure(:development) { DataMapper.setup(:default, "sqlite3://#{CURRENT}/data/development.db") }
-configure(:test) { DataMapper.setup(:default, "sqlite3://#{CURRENT}/data/test.db") }
-configure(:production) { DataMapper.setup(:default, "sqlite3://#{CURRENT}/data/production.db") }
+configure(:development) { DataMapper.setup(:default, "sqlite3://#{ROOT_DIR}/data/development.db") }
+configure(:test) { DataMapper.setup(:default, "sqlite3://#{ROOT_DIR}/data/test.db") }
+configure(:production) { DataMapper.setup(:default, "sqlite3://#{ROOT_DIR}/data/production.db") }
 
 enable :sessions
 
-Dir[CURRENT + '/routes/*.rb'].each{|file| load file}
-Dir[CURRENT + '/models/*.rb'].each{|file| load file}
+Dir[ROOT_DIR + '/routes/*.rb'].each{|file| load file}
+Dir[ROOT_DIR + '/models/*.rb'].each{|file| load file}
