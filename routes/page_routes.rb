@@ -1,7 +1,7 @@
-get 'page/read/:page_number' do
+get '/read/page/:page_number' do
   haml :'page/read'
 end
 
-get '/page/edit/:page_number' do
+get '/edit/page/:page_number' do
   haml :'page/edit'
 end
