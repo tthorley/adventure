@@ -37,3 +37,11 @@ enable :sessions
 
 Dir[ROOT_DIR + '/routes/*.rb'].each{|file| load file}
 Dir[ROOT_DIR + '/models/*.rb'].each{|file| load file}
+
+get '/missing' do
+  haml :'main/missing'
+end
+
+get '/*' do
+  redirect '/missing'
+end
