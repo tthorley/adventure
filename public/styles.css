@@ -102,6 +102,7 @@ form #button {
 	font-weight: 500;
 }
 #footer {
+	font-family: Georgia, Times, serif;
 	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
 	padding: 4px 1px;
