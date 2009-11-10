@@ -10,14 +10,14 @@ CREATE TABLE pages(
   content     TEXT,
   published   BOOLEAN default false,
   choice_id   INTEGER,
-  user_id     INTEGER,
+  author_id     INTEGER,
   created_at  TIMESTAMP,
   modified_at TIMESTAMP, 
   FOREIGN KEY(choice_id) REFERENCES choices(id),
-  FOREIGN KEY(user_id)   REFERENCES users(id)
+  FOREIGN KEY(author_id)   REFERENCES users(id)
 );
 
-CREATE TABLE users(
+CREATE TABLE authors(
   id            INTEGER PRIMARY KEY AUTOINCREMENT,
   name          VARCHAR(32),
   password_hash CHAR(64),

@@ -1,19 +1,19 @@
 get '/signup' do
   
-  haml :'user/signup'
+  haml :'author/signup'
 end
 
 get '/login' do
   
-  haml :'user/login'
+  haml :'author/login'
 end
 
 get '/profile' do
   
-  haml :'user/profile'
+  haml :'author/profile'
 end
 
 get '/logout' do
-  session[:user] = nil
+  session[:author] = nil
   redirect '/index'  
 end
