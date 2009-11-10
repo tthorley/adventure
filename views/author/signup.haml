@@ -1,17 +1,19 @@
 -if @error
   %p= @error
 %form{:action => "/signup", :method => "post"}
-  %label{:for => "name"} Name
-  %input{:type => "text", :name => "name"}
-  
-  %label{:for => "name_hash"} Code
-  %input{:type => "text", :name => "name_hash"}
-  
-  %label{:for => "password"} Password
-  %input{:type => "password", :name => "password"}
-  
-  %label{:for => "password_verify"} Verify Password
-  %input{:type => "password", :name => "password_verify"}
-  
-  %br
-  %input{:type => "submit", :value => "signup"}
+  .row
+    %span.label
+      %label{:for => "name"} Name
+    %span.input
+      %input{:type => "text", :name => "name"}
+  .row
+    %label{:for => "name_hash"} Code
+    %input{:type => "text", :name => "name_hash"}
+  .row
+    %label{:for => "password"} Password
+    %input{:type => "password", :name => "password"}
+  .row
+    %label{:for => "password_verify"} Verify Password
+    %input{:type => "password", :name => "password_verify"}
+  .row
+    %input{:type => "submit", :value => "sign up", :id => "button"}

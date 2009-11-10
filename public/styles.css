@@ -10,8 +10,44 @@ pre {
   width: 800px;
   margin: 40px auto;
 }
+												/* forms */
+form {
+	width: 360px;
+}
+div.row {
+  clear: both;
+  padding-top: 5px;
+}
 
-/***** navigation *****/
+div.row label {
+  float: left;
+  width: 150px;
+  text-align: right;
+}
+
+div.row input {
+  float: right;
+  width: 200px;
+  text-align: left;
+	display: inline;
+	margin-top: -2px;
+	border: 1px solid #333;
+}
+form #button {
+	margin: 0;
+	padding: 0;
+	border-top: 3px solid #999;
+	border-left: 3px solid #999;
+	border-right: 3px solid #666;
+	border-bottom: 3px solid #666;
+	background: #CCC;
+	color: #333;
+	width: 100px;
+	margin-right: 102px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+												/* navigation */
  
 #navigation {
   font-family: Georgia, Times, serif;
@@ -50,12 +86,15 @@ pre {
   border-bottom: 4px solid #666;
 }
 
-.index .index, .about .about, .explanation .explanation, .signup .signup {
+.index .index, .about .about, 
+.explanation .explanation, 
+.signup .signup, .login .login {
   color: #333 !important;
   border-bottom: 4px solid #333;
 }
 
-#content {
+												/* main content area */
+#content, input {
 	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
   font-size: 16px;
 	line-height: 24px;
@@ -66,6 +105,8 @@ pre {
 	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
 	padding: 4px 1px;
+	clear: both;
+	margin-top: 30px;
 }
 #footer .left {
 	float: left;
