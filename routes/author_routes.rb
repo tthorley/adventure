@@ -1,19 +1,22 @@
-get '/signup' do
-  
+get '/author/signup' do
   haml :'author/signup'
 end
 
-get '/login' do
+post '/author/signup' do
+  
+end
+
+get '/author/login' do
   
   haml :'author/login'
 end
 
-get '/profile' do
-  
-  haml :'author/profile'
-end
-
-get '/logout' do
+get '/author/logout' do
   session[:author] = nil
   redirect '/index'  
+end
+
+get '/author/profile' do
+  
+  haml :'author/profile'
 end
