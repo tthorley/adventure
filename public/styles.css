@@ -4,7 +4,10 @@ body {
 pre {
   white-space: pre-line;
 }
-
+a {
+	color: #369;
+	text-decoration: none;
+}
 #page {
   text-align: left;
   width: 800px;
@@ -43,12 +46,12 @@ div.row input {
 form #button {
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #999;
-	border-left: 3px solid #999;
-	border-right: 3px solid #666;
-	border-bottom: 3px solid #666;
-	background: #CCC;
-	color: #333;
+	border-top: 3px solid #4080BF;
+	border-left: 3px solid #4080BF;
+	border-right: 3px solid #264D73;
+	border-bottom: 3px solid #264D73;
+	background: #369;
+	color: #FFF;
 	width: 100px;
 	margin-right: 102px;
 	text-align: center;
