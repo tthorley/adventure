@@ -10,6 +10,13 @@ pre {
   width: 800px;
   margin: 40px auto;
 }
+												/* site-wide */
+.error {
+	border: 1px solid #C00;
+	background: #FEE;
+	padding: 5px;
+	color: #C00;
+}
 												/* forms */
 form {
 	width: 360px;
@@ -88,7 +95,8 @@ form #button {
 
 .index .index, .about .about, 
 .explanation .explanation, 
-.signup .signup, .login .login {
+.signup .signup, .login .login,
+.profile .profile {
   color: #333 !important;
   border-bottom: 4px solid #333;
 }

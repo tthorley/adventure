@@ -1,17 +1,17 @@
--if @error
-  %p= @error
+- if @errors
+  %p.error= @errors
 %form{:action => "/author/signup", :method => "post"}
   .row
     %label{:for => "author[name]"} Name
     %input{:type => "text", :name => "author[name]"}
   .row
-    %label{:for => "author[name_hash]"} Code
-    %input{:type => "text", :name => "author[name_hash]"}
+    %label{:for => "author[code]"} Code
+    %input{:type => "text", :name => "author[code]"}
   .row
     %label{:for => "author[password]"} Password
     %input{:type => "password", :name => "author[password]"}
   .row
     %label{:for => "author[password_verify]"} Verify Password
-    %input{:type => "password", :name => "author[password_verify]"}
+    %input{:type => "password", :name => "author[verify]"}
   .row
     %input{:type => "submit", :value => "sign up", :id => "button"}
