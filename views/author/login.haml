@@ -1,0 +1,11 @@
+- if @errors
+  %p.error= @errors
+%form{:action => "/author/login", :method => "post"}
+  .row
+    %label{:for => "author[name]"} Name
+    %input{:type => "text", :name => "author[name]"}  
+  .row
+    %label{:for => "author[password]"} Password
+    %input{:type => "password", :name => "author[password]"}  
+  .row
+    %input{:type => "submit", :value => "log in", :id => "button"}

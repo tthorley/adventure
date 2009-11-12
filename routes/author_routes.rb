@@ -14,14 +14,27 @@ post '/author/signup' do
     session[:errors] = errors
     redirect '/author/signup'
   end
-  author = Author.create(:name => params[:author][:name], :password => params[:author][:password])
+  author = Author.create(:name => params[:author][:name], 
+                         :password => params[:author][:password], 
+                         :created_at => Time.now)
   session[:author] = author
   redirect '/author/profile'
 end
 
 get '/author/login' do
-  
+  @errors = session[:errors]
+  session[:errors] = nil
   haml :'author/login'
+end
+
+post '/author/login' do
+  author = Author.authenticate(params[:author][:name], params[:author][:password])
+  unless author
+    session[:errors] = "name/password incorrect"
+    redirect '/author/login'
+  end
+  session[:author] = author
+  redirect '/author/profile'
 end
 
 get '/author/logout' do
