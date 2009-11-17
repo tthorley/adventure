@@ -43,6 +43,5 @@ get '/author/logout' do
 end
 
 get '/author/profile' do
-  
   haml :'author/profile'
 end
